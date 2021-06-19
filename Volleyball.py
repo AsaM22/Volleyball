@@ -6,15 +6,12 @@
 class Volleyball:
     def __init__(self, input_players: list):
         
-        
-
         self._player_list = self._turn_title(input_players)
         self._starting_player_list = input_players
 
 
     def _turn_title(self, input_list: list):
         return [each_string.title() for each_string in input_list]
-
         
 
     def rotate(self) -> None:
@@ -57,9 +54,11 @@ class Volleyball:
         """Returns starting 6 players position"""
         return self._starting_player_list
 
+
     def get_current_rotation(self) -> list:
         """Returns the current curation of players"""
         return self._player_list
+
 
     def remove_player(self, player_name: str) -> None:
         """Removes player from the current rotation"""
@@ -73,6 +72,8 @@ class Volleyball:
                 
         except ValueError:
             print('Sorry that player doesn\'t exist')
+
+
 
 if __name__ == '__main__':
     game = Volleyball(['Gabby', 'Connor', 'maGgie', 'Clark', 'Cooper', 'Rossi', 'Asa', 'Cece'])
